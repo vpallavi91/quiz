@@ -1,0 +1,22 @@
+#home{
+	display: none;
+}
+#about{
+	display: none;
+}
+#test{
+	display: none;
+}
+#nav2{
+	display: none;
+}
+.gap{
+	height: 60px;
+}
+.ans{
+	height: 55%;
+}
+#end{
+	background-image: url(../img/testimonials_bg.jpg);
+	background-size: cover;
+}

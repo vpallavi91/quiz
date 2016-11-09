@@ -1,0 +1,330 @@
+#search1{
+	position: absolute;
+	top: 35%;
+	display: none;
+	width: 100%;
+
+}
+
+form.field{
+	background-color: rgba(128,128,128,0.8);
+}
+
+
+button.set{
+	width:35px;
+	height:35px;
+	
+	background-color: #f1155a;
+	border: 0;
+	border-radius: 5px;
+
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	width:100%;
+}
+
+
+.navset{
+	position: absolute;
+	bottom:10%;
+}
+
+
+nav.nav{
+
+	padding:1px 10px;
+	height:170px;
+	padding-bottom: 10px;
+	width:100%;
+	
+}
+
+nav.nav23{
+	background-color: #423338;
+	height: 70px;
+}
+
+
+div.container1{
+	width:100%;
+}
+
+
+
+
+
+
+
+
+#nav{
+	display:none;
+}
+
+button.menu{
+	position:absolute;
+	top:5px;
+	right:20px;
+}
+
+button.menu1{
+	position:absolute;
+	top:1px;
+	right:20px;
+}
+button.btnid{
+	position:absolute;
+	top:50%;
+	height:75px;
+	width:175px;
+}
+img.head-img{
+	height:70px;
+	width:200px;
+}
+
+div.cover{
+	background-color: rgba(128,128,128,0.8);
+	border-radius:40px; 
+}
+
+ul.searchul li{
+	background-color: rgba(128,128,128,0.8);
+}
+
+div.rel1{
+	position: absolute;
+	bottom:5%;
+}
+#home{
+	width:100%;
+	height:100vh;
+
+	background-color: black;
+}
+#about{
+	width:100%;
+	height:100vh;
+	background-color:#f3f3f3;
+	padding-top:100px;
+}
+#test{
+	width:100%;
+	height:100vh;
+	background-color: black;
+	padding-top:200px;
+	background-image: url("../img/testimonials_bg.jpg");
+	background-size:cover;
+	position: relative;
+}
+
+h1#head::hover{
+	font-color:yellow;
+}
+
+
+
+@media screen and (max-width: 600px){
+    #test{
+    	height:130vh;
+    }
+
+
+}
+
+img.footer{
+	width:150px;
+	height:90px;
+}
+#icon{
+	font-size:25px;
+}
+
+#profile1{
+	height: 30px;
+	width: 30px;
+	top:2%;
+	
+	margin-left: 10px;
+}
+
+@media screen and (max-width: 600px){
+	#about{
+    	height: 130vh;
+    }
+}
+@media screen and (max-width: 450px){
+
+	button.btnid{
+		height:50px;
+		width:130px;
+
+	}
+	.navset{
+	
+	bottom:5%;
+}
+	h1.abouth{
+	font-size:45px;
+    }
+
+    #test{
+    	height:150vh;
+    }
+
+    #about{
+    	height: 150vh;
+    }
+   
+
+}
+
+@media screen and (max-width: 350px){
+	 div.rel1{
+	
+	bottom:-8%;
+}
+}
+div.active{
+	display:block;
+}
+
+div.cs2{
+	display:none;
+	transition: all 2s ease;
+
+}
+div.cs3{
+	display:none;
+	transition: all 2s ease;
+
+
+}
+div.cs4{
+	display:none;
+	transition: all 2s ease;
+}
+.img{
+	max-width:250px;
+	max-height: 250px; 
+	border-radius: 150px;
+  border: 10px solid white;
+}
+.img1{
+	max-width:250px;
+	max-height: 150px; 
+	border-radius: 150px;
+  border: 10px solid white;
+}
+
+p.font{
+	font-size:35px;
+}
+p.by{
+	font-size:25px;
+	padding-top:20px; 
+}
+
+footer#footer{
+	background-color: #423338;
+	margin-top: -30px;
+
+}
+
+#footer1{
+	background-color:#241c1f;
+}
+
+.icon {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  margin: 4px;
+  width: 85px;
+  height: 96px;
+  font-size: 0;
+
+  }
+
+
+
+  .icon-cube {
+  position: relative;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  overflow: visible;
+}
+
+.icon-cube::before,
+.icon-cube::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/sprites.png");
+  background-image: url("../img/icons5.svg"), none;
+  content: "";
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+
+.icon-cube::before {
+  z-index: 2;
+  background-color: #595959;
+}
+
+.icon-cube::after {
+  z-index: 1;
+  opacity: 0;
+  -webkit-transform: translateY(48px) rotateX(-90deg);
+          transform: translateY(48px) rotateX(-90deg);
+}
+
+.icon-cube:hover::before {
+  opacity: 0;
+  -webkit-transform: translateY(-48px) rotateX(90deg);
+          transform: translateY(-48px) rotateX(90deg);
+}
+
+.icon-cube:hover::after {
+  opacity: 1;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+/* facebook */
+.icon-cube.facebook::before,
+.icon-cube.facebook::after {
+  background-position: 0 0;
+}
+
+.icon-cube.facebook::after {
+  background-color: #3b5998;
+}
+
+/* twitter */
+.icon-cube.twitter::before,
+.icon-cube.twitter::after {
+  background-position: -96px 0;
+}
+
+.icon-cube.twitter::after {
+  background-color: #4099ff;
+}
+
+/* google plus */
+.icon-cube.googleplus::before,
+.icon-cube.googleplus::after {
+  background-position: -192px 0;
+}
+
+.icon-cube.googleplus::after {
+  background-color: #d34836;
+}

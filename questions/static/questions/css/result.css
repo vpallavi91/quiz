@@ -1,0 +1,26 @@
+#home{
+	display: none;
+}
+#about{
+	display: none;
+}
+#test{
+	display: none;
+}
+#nav2{
+	display: none;
+}
+label{
+	font-size: 300%;
+	color: #26c6da ;
+}
+.gap{
+	height: 45px;
+}
+.ans{
+	height: 50%;
+}
+#result{
+	background-image: url(../img/testimonials_bg.jpg);
+	background-size: cover;
+}

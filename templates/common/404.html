@@ -1,0 +1,24 @@
+{% extends 'account/loggedin.html' %}
+{% load staticfiles %}
+{% block extrahead %}
+<link href="{% static 'questions/css/practice1.css' %}" rel="stylesheet">
+{% endblock %}
+{% block page_title %} Not Found{% endblock %}
+{% load material_form %}
+ {% block extra %}
+ <section id="practice">
+ 
+ 
+ <div class="row ques_div practice">
+     <div class="col s12 m10 l10 offset-m1 offset-l1">
+         <div class="card-panel ">
+         <h1>Page Not Found</h1>    
+         </div>
+         
+     </div>
+ </div>
+
+ 
+ 
+ </section>
+ {% endblock %}

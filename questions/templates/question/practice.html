@@ -1,0 +1,54 @@
+{% extends 'account/loggedin.html' %}
+{% load staticfiles %}
+{% block extrahead %}
+<link href="{% static 'questions/css/practice1.css' %}" rel="stylesheet">
+{% endblock %}
+{% block page_title %} Practice Question {% endblock %}
+{% load material_form %}
+ {% block extra %}
+ <section id="practice">
+ <div class="row gap practice">
+ <div clss="col s12">
+ </div>
+ </div>
+ <div class="row ques_div practice">
+     <div class="col s12 m10 l10 offset-m1 offset-l1">
+         <div class="card-panel ">
+             <form id= "{% url 'prac-ques' id=q_id %}" method='POST'>
+                 {% csrf_token %}
+                 {% form form=p %}{% endform %}
+                 <div class="row">
+                     <div class="col s12 enter">
+                         <button type="submit" id ="login-btn" name="login" class="btn waves-effect waves-light left">Submit</button></div>
+                 </div>
+             </form>
+             <div class='row pin2'>
+             <div class='col s12'>
+             </div>
+             </div>
+             <div class='row' id="pin">
+             <div class='col s12'>
+                         <button type="submit" id ="sub" name="login" class="btn waves-effect waves-light left"><a href="{% url 'prac' %}">Try More</a></button></div></div>
+
+         </div>
+     </div>
+ </div>
+ <div class="row gap practice">
+ <div clss="col s12">
+ </div>
+ </div>
+ </section>
+ {% endblock %}
+ {% block scripts %}
+<script src="{% static 'questions/js/pract.js' %}"></script>
+
+ <script>
+ function onBodyLoad(){
+    var act=$('form');
+    act=act[0].id;
+
+    check.init(act);
+ }
+ window.addEventListener('load',onBodyLoad);
+ </script>
+ {% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'account/loggedin.html' %}
+{% load staticfiles %}
+{% block extrahead %}
+<link href="{% static 'questions/css/quiz.css' %}" rel="stylesheet">
+{% endblock %}
+{% block page_title %}Quiz{% endblock %}
+{% load material_form %}
+ {% block extra %}
+ <section id="quiz">
+ <div class="row">
+     <div class="col s12 m10 l10 offset-m1 offset-l1">
+         <div class="card-panel">
+             <h4 id="beforeit">Quiz</h4>
+             <form id="{% url 'check-quiz' id=test_id %}" method='POST'>
+                 {% csrf_token %}
+                 {% form form=q %}{% endform %}
+                 <div class="row">
+                     <div class="col s12">
+                         <button type="submit" id ="login-btn" name="login" class="btn waves-effect waves-light left">Submit</button>
+                     </div>
+                 </div>
+             </form>
+         </div>
+     </div>
+ </div>
+ </section>
+ {% endblock %}
+{% block scripts %}
+<script src="{% static 'questions/js/quiz.js' %}"></script>
+
+ <script>
+ function onBodyLoad(){
+    var act=$('form');
+    act=act[0].id;
+
+    uncheck.init(act);
+ }
+ window.addEventListener('load',onBodyLoad);
+ </script>
+ {% endblock %}

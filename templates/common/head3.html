@@ -1,0 +1,34 @@
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="{% url 'view-profile' id=request.user.id %}"><i class="fa fa-user"></i>&nbsp;&nbsp;PROFILE</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'results' id=request.user.id %}"><i class="fa fa-book"></i>&nbsp;&nbsp;RESULTS</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'add-question' %}"><i class="fa fa-plus"></i>&nbsp;&nbsp;ADD QUESTION</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out">&nbsp;&nbsp;LOGOUT</i></a></li>
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+<li><a href="{% url 'prac' %}">PRACTICE</a></li>
+<li class='divider'></li>
+<li><a href="{% url 'new-quiz' %}">TAKE QUIZ</a></li>
+</ul>
+
+<div id="nav1" class="navbar-fixed">
+<nav class="brown darken-4">
+  <div class="nav-wrapper">
+<a href='{% url 'home' request.user.id %}'>&nbsp;&nbsp;HOME</a>
+      <ul class="right">
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown2">PLAY</a></li>
+      <!-- Dropdown Trigger -->
+       {% if user.profile_pic %}
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+
+      <img src="{{ user.profile_pic.url }}" class="responsive-img" id="profile1">&nbsp;Hi,&nbsp;{{request.user}}&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+      {% else %}
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+<i class="fa fa-user"></i>
+      &nbsp;Hi,&nbsp;{{request.user}}&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+      {% endif %}
+  </div>
+</nav>
+</div>

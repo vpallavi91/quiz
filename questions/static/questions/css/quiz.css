@@ -1,0 +1,21 @@
+#home{
+	display: none;
+}
+#about{
+	display: none;
+}
+#test{
+	display: none;
+}
+#nav2{
+	display: none;
+}
+label{
+	font-size: 200%;
+	color: #26c6da ;
+}
+#quiz{
+	background-image: url(../img/testimonials_bg.jpg);
+	background-size: cover;
+
+}

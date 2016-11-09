@@ -1,0 +1,20 @@
+#dropdown1{
+	margin-top: 50px;
+	z-index: 1000;
+	display: float;
+}
+#dropdown2{
+	margin-top: 50px;
+	z-index: 1000;
+	display: float;
+}
+nav.white{
+
+	z-index: 0;
+}
+#nav2{
+	z-index: 998;
+}
+#nav1{
+	z-index: 999;
+}

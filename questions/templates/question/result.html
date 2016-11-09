@@ -1,0 +1,27 @@
+{% extends 'account/loggedin.html' %}
+{% load staticfiles %}
+{% block extrahead %}
+<link href="{% static 'questions/css/result.css' %}" rel="stylesheet">
+{% endblock %}
+{% block page_title %} Question Result{% endblock %}
+{% load material_form %}
+ {% block extra %}
+ <section id="result">
+ <div class="row gap practice">
+ <div clss="col s12">
+ </div>
+ </div>
+ <div class="row ans">
+     <div class="col s12 m8 l6 offset-m2 offset-l3">
+         <div class="card-panel">
+             <h4> Result</h4>
+             <p>{{m}}</p>
+             <p>{{marks}}</p>
+         </div>
+     </div>
+ </div>
+ 
+ </section>
+
+
+ {% endblock %}

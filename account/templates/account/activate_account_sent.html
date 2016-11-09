@@ -1,0 +1,53 @@
+
+{% extends 'common/base1.html' %}
+{% block link %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/login.css' %}">
+{% endblock link %}
+
+
+{% block title %}QuizoPedia{% endblock %}
+{% load material_form %}
+
+
+{% block head %}{% include 'common/head1.html' %}{% endblock %}
+{% block content %}
+<div id="contain">
+<div id="particles-js"> 
+<div class="row form1">
+     <div class="col s12 m8 l6 offset-m2 offset-l3">
+         <div class="card-panel mycard1 form2">
+                  <h3>Hey, {{ u.username }}. We have sent you instructions to activate account on {{ u.email }}.</h3>    
+                    </div>
+     </div>
+ </div>
+</div>
+</div>
+   {% block footer %}
+       <footer class="page-footer" id="footer">
+          <div class="container">
+              <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">QuizArena</h5>
+                <img src="{% static 'common/img/logo.png' %}" class="footer">
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li class="white-text">Mail:contact@quizarena.in</li>
+                  <li class="white-text">Phone:-+91-9654726161</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright" id="footer1">
+            <div class="container">
+            © 2014 Copyright Text QuizArena. All rights reserved.
+            
+            </div>
+          </div>
+        </footer>
+        {% endblock %}
+
+ 
+{% endblock %}

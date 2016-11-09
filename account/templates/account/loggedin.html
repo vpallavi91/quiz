@@ -1,0 +1,24 @@
+{% extends 'common/base1.html' %}
+{% load staticfiles %}
+{% block morehead %}
+<link href="{% static "account/css/base2.css" %}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script type="text/javascript" src="{% static "common/js/jquery-2.2.1.min.js" %}"></script>
+<script type="text/javascript" src="{% static "account/js/base2.js" %}"></script>
+<script type="text/javascript" src="{% static 'common/js/search.js' %}"></script>
+{% endblock %}
+{% block extranav %}{% include 'common/head3.html' %}{% endblock %}
+
+{% block scripts %}
+<script>
+	$(window).ready(function(){
+
+		Search.init();
+
+	});
+</script>
+
+ {% endblock %}
+
+ 
+

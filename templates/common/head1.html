@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<link href="{% static 'common/hamburger/hamburgers-master/dist/hamburgers.css' %}" rel="stylesheet">
+<link href="{% static 'common/css/base.css' %}" rel="stylesheet">
+{% block head %}
+<div id="nav2" class="navbar-fixed">
+<nav class="nav23">
+
+<a href="#" class="brand-logo white-text"><img src="{% static 'common/img/logo.png' %}" class="head-img"></a>
+
+<button class="hamburger hamburger--elastic menu hide-on-med-and-down" type="button"
+        label="Menu" aria-controls="navigation">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+
+<button class="hamburger hamburger--emphatic button-collapse menu1 hide-on-med-and-up" type="button"
+        label="Menu" aria-controls="navigation" data-activates="slide-out" >
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+
+  <ul class="right hide-on-med-and-down"  id="nav">
+    <li><a href="#home" class="white-text">HOME</a></li>
+    <li><a href="#about" class="white-text">ABOUT US</a></li>
+    <li><a href="#test" class="white-text">CONTACT US</a></li>
+  </ul>
+  <ul id="slide-out" class="side-nav">
+    <li><a href="#home" class="black-text">HOME</a></li>
+    <li><a href="#about" class="black-text">ABOUT US</a></li>
+    <li><a href="#test" class="black-text">CONTACT US</a></li>
+  </ul>
+  
+</nav>
+</div>
+{% endblock %}

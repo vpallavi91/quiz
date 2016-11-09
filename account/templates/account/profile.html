@@ -1,0 +1,57 @@
+{% extends 'account/loggedin.html' %}
+{% load staticfiles %}
+{% block extrahead %}
+<link href="{% static 'questions/css/practice1.css' %}" rel="stylesheet">
+{% endblock %}
+{% block page_title %} Practice Question {% endblock %}
+{% load material_form %}
+ {% block extra %}
+ <section id="practice">
+ 
+ 
+ <div class="row ques_div practice">
+     <div class="col s12 m10 l10 offset-m1 offset-l1">
+         <div class="card-panel ">
+         <ul class="collection">
+    <li class="collection-item avatar">
+      <i class="material-icons circle">folder</i>
+      <span class="title"><h4>Username:</h4></span>
+      <p><h2 class="blue-text">{{ user.username }}</h2>
+      {% if user.profile_pic %}
+      <img src="{{ user.profile_pic.url }}" class="responsive-img" id="profile">
+      {% endif %}
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">insert_chart</i>
+      <span class="title"><h4>Phone:</h4></span>
+      <p>{{ user.phone }}
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">play_arrow</i>
+      <span class="title">Email:</span>
+      <p>{{ user.email }}
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <span class="title"><a href="{% url 'edit-profile' id=request.user.id %}"><button class="btn waves-effect waves-light btnid black-text" type="submit" name="action">Edit Profile
+                                <i class="fa fa-share" aria-hidden="true"></i>
+                                  </button></a></span>
+      
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+  </ul>
+             
+         </div>
+         
+     </div>
+ </div>
+
+ 
+ 
+ </section>
+ {% endblock %}

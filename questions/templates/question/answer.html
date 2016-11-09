@@ -1,0 +1,33 @@
+{% extends 'account/loggedin.html' %}
+{% load staticfiles %}
+{% block extrahead %}
+<link href="{% static 'questions/css/ans1.css' %}" rel="stylesheet">
+{% endblock %}
+{% block page_title %} Question Result{% endblock %}
+{% load material_form %}
+ {% block extra %}
+ <section id="answer">
+ <div class="row gap practice">
+ <div clss="col s12">
+ </div>
+ </div>
+
+ <div class="row">
+     <div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3">
+         <div class="card-panel">
+             <h4> Result</h4>
+             <p id="red">Correct Answer:{{correct.choice_text}}</p>
+             <p id="blue">Your Answer   :{{value.choice_text}}</p>
+             <p id="msg">{{message}}</p>
+         </div>
+     </div>
+ </div>
+ <div class='row ans'>
+ <div class='col s10 m8 l6 offset-s1 offset-m2 offset-l3'>
+ <a href='{% url 'prac' %}'<button type="submit" id ="login-btn" name="login" class="btn waves-effect waves-light left">TRY MORE</button></a>
+ </div>
+ </div>
+ </section>
+
+
+ {% endblock %}

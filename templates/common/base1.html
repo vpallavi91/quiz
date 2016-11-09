@@ -1,0 +1,201 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title> {% block page_title %}QuizArena {% endblock %} </title>
+        <link rel="icon" type="image/png" href="{% static 'common/img/logo.png' %}">
+        
+        <link href="{% static 'common/css/base.css' %}" rel="stylesheet">
+        <link href="{% static 'common/hamburger/hamburgers-master/dist/hamburgers.css' %}" rel="stylesheet">
+        <link href="{% static 'common/css/particles.css' %}" rel="stylesheet">
+       
+        <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="description" content="Math and Brain Games. Mathematics and  General knowledge Question Database. For students , teachers and parents. Free Quizes on Math General knowledge and Brain Teasers.">
+
+
+<meta name="keywords" content="math, maths, mathematics, gk, general knowledge,school, college, students,education">
+        <link rel="stylesheet" href="{% static 'common/font/font-awesome/css/font-awesome.min.css' %}">
+        {% block link %}{% endblock %}
+        {% include 'material/includes/material_css.html' %}
+        {% block extrahead %} {% endblock %}
+        {% block morehead %} {% endblock %}
+    </head>
+    <body>
+    <div class="container1">
+    {% block extranav %}{% endblock %}
+    {% include 'common/head1.html' %}
+        
+
+            {% block extra %} {% endblock %}
+            {% block content %}
+            <section id="home">
+           
+
+             <div id="particles-js">
+               <div class="row">
+               <div class="col s10 m8 l6 offset-s1 offset-m3 offset-l4">
+                    <h1 class="white-text abouth" id="head">QuizArena</h1>
+                    </div>
+                    </div>
+
+
+                   <div class="row rel" id="change">
+                            <div class="col s4 m2 l2 offset-s1 offset-m2 offset-l3">
+                              <a href="{% url 'login' %}">  <button class="btn waves-effect waves-light btnid black-text white" type="submit" name="action">Login
+                                <i class="fa fa-share" aria-hidden="true"></i>
+                                  </button></a>
+                            </div>
+                            <div class="col s4 m2 l2 offset-s6 offset-m7 offset-l7">
+                                <a href="{% url 'signup' %}"><button class="btn waves-effect waves-light btnid black-text white" type="submit" name="action">Signup
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                              </button></a>
+                            </div>
+                        </div>
+                        
+                               <div class="row" id="search1">
+      <form class='col s8 m8 l6 offset-s2 offset-m2 offset-l3 field'>
+        <div class="input-field">
+        <i class="fa fa-search prefix" aria-hidden="true"></i>
+          <input id="id_search" type="text" placeholder="Search Quizes" name="search">
+          <ul class="collection with-header serachul">
+          <li class="collection-header">Type Something On the Top!!</li>
+              
+          </ul>
+        </div>
+      </form>
+    </div>
+                   <div class="row">
+                                <div class=" col s12 l6 m8 offset-l4 offset-m3 rel1">
+                                <div class="col s4 l2 m3">
+                                
+                                <a href="#" class="icon icon-cube facebook"></a></div>
+                                <div class="col s4 l2 m3">
+                                <a href="#" class="icon icon-cube twitter"></a></div>
+                                <div class="col s4 l2 m3">
+                                <a href="#" class="icon icon-cube googleplus"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+            <section id="about">
+            <div class="container">
+            <div class="row">
+                            <div class="col s12 m5">
+                                <h2>About QuizArena</h2>
+                                <p>QuizArena is the perfect website to create and deliver online questions and tests. The idea behind the site is to make mathematics and GK fun through challenging questions and quizzes.Options such as free Quizes and Practice questions are available on the site.<br><br>The main content of the site is aimed at basic math and General knowledge skills. However you will find some more complex stuff, and some easier bits. Hopefully there should be something for everybody.The site will continue to grow over time. Keep coming back to find out what has been added.<br><br> </p>
+                            </div>
+                            <div class="col s12 m7 cover">
+                                <p class="about-image"><img src="{% static 'common/img/logo.png' %}" alt="" class="responsive-img"></p>
+                            </div>
+                        </div>
+                     </div>
+
+
+                
+            </section>
+            <section id="test">
+            <div class="review">
+            <div class="row  active cs1">
+            <div class="col s8 m4 l4 offset-l1 offset-m2 offset-s2" >
+            <img src="{% static 'common/img/kavya1.jpg' %}" class="circle responsive-img img">
+                
+            </div>
+            <div class="col s10 m6 l6 offset-s1">
+            <p class="white-text font">Awesome startup by you guys,found some great stuff here. Keep up the good work!</p>
+            <p class="white-text by">-Kavya Jain,DU</p>
+                
+            </div>
+                
+            </div>
+
+
+            <div class="row cs2">
+            <div class="col s8 m4 l4 offset-l1 offset-m2 offset-s2" >
+            <img src="{% static 'common/img/sud.jpg' %}" class="circle responsive-img img">
+                
+            </div>
+            <div class="col s10 m6 l6 offset-s1">
+            <p class="white-text font">Perfect site!! Helping a lot  in strengthening my mathematical skills.</p>
+            <p class="white-text by">-Sudhanshu Chopra,MAIT</p>
+                
+            </div>
+                
+            </div>
+
+            <div class="row cs3">
+            <div class="col s8 m4 l4 offset-l1 offset-m2 offset-s2" >
+            <img src="{% static 'common/img/sahil1.jpg' %}" class="circle responsive-img img">
+                
+            </div>
+            <div class="col s10 m6 l6 offset-s1">
+            <p class="white-text font">Good Work,The site covers almost aspect from basics to complex.Keep it up.</p>
+            <p class="white-text by">-Sahil Harjai,MAIT</p>
+                
+            </div>
+                
+            </div>
+
+            <div class="row cs4">
+            <div class="col s8 m4 l4 offset-l1 offset-m2 offset-s2" >
+            <img src="{% static 'common/img/gur.jpg' %}" class="circle responsive-img img">
+                
+            </div>
+            <div class="col s10 m6 l6 offset-s1">
+            <p class="white-text font">Great Site!! Perfect UI Design,Get all the latest questions and quizes with ease.</p>
+            <p class="white-text by">-Gurchetan Singh,MAIT</p>
+                
+            </div>
+                
+            </div>
+            <div class="row">
+            <div class="col s4 m3 l3 offset-s4 offset-m5 offset-l5 navset">
+            <div class="navigation">
+                            <button class="button-prev set"><i class="fa fa-chevron-left white-text"></i></button>
+                            <button class="button-next set"><i class="fa fa-chevron-right white-text"></i></button>
+                        </div>
+              </div>
+              </div>  
+              </div>
+            </section>
+            {% block footer %}
+       <footer class="page-footer" id="footer">
+          <div class="container">
+              <div class="row">
+              <div class="col l6 s12">
+              <h5 class="white-text">QuizArena</h5>
+                <img src="{% static 'common/img/logo.png' %}" class="footer">
+              </div>
+              <div class="col l4 offset-l2 s10">
+                <h5 class="white-text">Links</h5>
+                <ul>
+             
+                  <li class="white-text"><i class="fa fa-google-plus" aria-hidden="true" id="icon"></i>:contactquizarena@gmail.com</li>
+                  <li class="white-text"><i class="fa fa-whatsapp white-text" aria-hidden="true" id="icon"></i>:-+91-9654726161</li>
+                  <li class="white-text"><i class="fa fa-whatsapp white-text" aria-hidden="true" id="icon"></i>:-+91-9582020023</li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright" id="footer1">
+            <div class="container">
+            © 2016 Copyright Text QuizArena. All rights reserved.
+            
+            </div>
+          </div>
+        </footer>
+        {% endblock %}
+
+            {% endblock %}
+            </div>
+        
+        <script src="{% static 'common/js/jquery-2.2.1.min.js' %}"></script>
+        <script src="{% static 'common/js/base.js' %}"></script>
+        <script src="{% static 'common/js/particles.js' %}"></script>
+        {% include 'material/includes/material_js.html' %}
+        {% block scripts %} {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'account/loggedin.html' %}
+{% load staticfiles %}
+{% block extrahead %}
+<link href="{% static 'questions/css/practice_list.css' %}" rel="stylesheet">
+{% endblock %}
+{% block page_title %} Practice Question {% endblock %}
+{% load material_form %}
+ {% block extra %}
+ <section id="practice_list">
+ <div class="row ques_div practice">
+     <div class="col s12 m10 l10 offset-m1 offset-l1">
+         <div class="card-panel ">
+         <h4>Practice Questions</h4>
+         <ul>
+             {% for object in ques_list %}
+             <li><div class='card-panel'>
+             <div class="row">
+             <div class="col s12">
+             <p class="inc">{{object.question}}</p>
+             <p>Added By:{{object.created_by}}</p>
+             </div>
+             </div>
+             <div class="row">
+                     <div class="col s1 offset-s8">
+                         <a href="{% url 'prac-ques' id=object.id %}"<button type="submit" id ="login-btn" name="login" class="btn waves-effect waves-light left">View</button></a>
+                     </div>
+                 </div>
+                 </div>
+             </li>
+             {% endfor %}
+             </ul>
+         </div>
+     </div>
+ </div>
+ </section>
+ {% endblock %}

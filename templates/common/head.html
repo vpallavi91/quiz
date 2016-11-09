@@ -1,0 +1,17 @@
+{% load staticfiles %}
+   <nav class="nav red darken-2">
+    <div class="nav-wrapper">
+      
+      <ul class="valign-wrapper ul">
+      <li><img src="{% static 'account/images/quora.png' %}" class="img"><h1 class="black-text welcome"> Welcome, {{ user.username }}</h1></li>
+      
+      <li><a href="{% url 'home' id=user.id %}">Home</a></li>
+      <li><a href="{% url 'logout' %}">Logout</a></li></ul>
+        
+  
+  
+      </ul>
+    </div>
+  </nav>
+  
+ 
